@@ -1,0 +1,79 @@
+body {
+    background-color: #fdfffc;
+    color: #303030;
+    font-family: 'Alata', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Header and Footer  formatting */
+header,
+footer {
+    margin: auto;
+    text-align: center;
+    background-color: #303030;
+    color: white;
+    margin-top: 0;
+
+}
+
+h1 {
+    padding: 16px 0px 0px;
+    margin: 0px;
+    font-size: 46px;
+    font-weight: 700;
+}
+
+header p,
+footer p {
+    padding: 30px;
+    font-size: 22px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Main container formatting */
+section>img {
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+main>div {
+    margin: 50px auto;
+    padding: 10px;
+    width: 50%;
+}
+
+h2,
+p,
+ul,
+ol {
+    text-align: justify;
+}
+
+div h2 {
+    text-align: center;
+}
+
+hr {
+    margin: 50px auto;
+}
+
+/* contact me links style */
+a:link {
+    color: #8d99ae;
+}
+
+a:visited {
+    color: #4a4e69;
+}
+
+a:hover {
+    color: #011627;
+}
+
+a:active {
+    color: #3d5a80;
+}
