@@ -1,86 +1,225 @@
 body {
-    background-color: #fdfffc;
-    color: #303030;
-    font-family: 'Alata', sans-serif;
-    text-align: center;
-    font-size: 20px;
+  background-color: #fdfffc;
+  color: #6d68a1;
+  font-family: 'Alata', sans-serif;
+  text-align: center;
+  font-size: 20px;
 }
 
 /* Header and Footer  formatting */
 header,
 footer {
-    margin: auto;
-    text-align: center;
-    background-color: #303030;
-    color: white;
-    margin-top: 0;
-
+  margin: auto;
+  text-align: center;
+  background-color: #aba8ce;
+  color: #fdfffc;
+  margin-top: 0;
 }
 
 h1 {
-    padding: 16px 0px 0px;
-    margin: 0px;
-    font-size: 46px;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-header h2,
-footer p {
-    padding: 30px;
-    margin: 0;
-    text-align: center;
+  padding: 16px 0px 0px;
+  margin: 0px;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 footer p {
-    font-size: 22px;
+  padding: 30px;
+  margin: 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 22px;
+}
+
+/* Nav-bar Mobile view */
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+  justify-content: center;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+header nav ul li {
+  margin: 0 10px 0 0;
+}
+
+header nav ul li:last-child {
+  margin-right: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fdfffc;
 }
 
 /* Main container formatting */
-section>img {
-    width: 600px;
-    height: 500px;
-    text-align: center;
-    border-radius: 50%;
+
+section .group img {
+  width: 60%;
+  text-align: center;
+  border-radius: 50%;
 }
 
-main>article {
-    margin: 50px auto;
-    padding: 10px;
-    width: 50%;
+section {
+  margin: 0;
+  padding: 30px;
 }
 
-h2,
 p,
 ul,
 ol {
-    text-align: justify;
+  text-align: justify;
 }
 
-section h3 {
-    text-align: center;
+section h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 38px;
 }
 
 hr {
-    margin: 50px auto;
+  margin: 50px auto;
 }
 
 /* contact me links style */
-a:link {
-    color: #8d99ae;
+#contact-me a:link {
+  color: #6d68a1;
 }
 
-a:visited {
-    color: #4a4e69;
+#contact-me a:visited {
+  color: #423f66;
 }
 
-a:hover {
-    color: #011627;
+#contact-me a:hover {
+  color: #aba8ce;
 }
 
-a:active {
-    color: #3d5a80;
+#contact-me a:active {
+  color: #3d5a80;
+}
+
+/* About Me and services Mobile format */
+#about-me,
+#services {
+  background-color: #6d68a1;
+  color: #fdfffc;
+}
+
+#services ul li {
+  margin: 20px 0;
+}
+
+/* Group and Items for Mobile */
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  align-self: center;
+}
+
+.item-double {
+  flex: 2;
+}
+
+/* contact-me formatting */
+ {
+}
+
+#contact-me .item {
+  align-self: start;
+  margin-top: 30px;
+}
+#contact-me .item ol li {
+  margin: 10px 10px;
+}
+
+/* Form formatting Mobile view */
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+form label,
+input {
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  background-color: #efeef3;
+  border: none;
+  border-radius: 20px;
+}
+
+form button {
+  height: 30px;
+  margin-top: 20px;
+  background-color: #6d68a1;
+  color: #fdfffc;
+  border: none;
+  border-radius: 20px;
+}
+
+/* View for Desktop */
+@media all and (min-width: 800px) {
+  /* Nav bar Desktop */
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    margin: 0 0 20px 40px;
+  }
+
+  header nav {
+    margin: 14px 30px 0 0;
+  }
+
+  header nav ul li a:hover {
+    color: #efeef3;
+  }
+
+  /* intro section */
+
+  section {
+    margin: 20px 168px;
+  }
+
+  section .group img {
+    width: 80%;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #about-me,
+  #services {
+    padding: 50px 168px;
+    margin: 0;
+  }
+
+  #contact-me .item-double {
+    padding-right: 80px;
+  }
 }
