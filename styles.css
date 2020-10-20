@@ -80,7 +80,8 @@ section {
 p,
 ul,
 ol {
-  text-align: justify;
+  text-align: left;
+  word-spacing: normal;
 }
 
 section h2 {
@@ -94,19 +95,19 @@ hr {
 }
 
 /* contact me links style */
-#contact-me a:link {
+#contact-me a:link, #projects a:link {
   color: #6d68a1;
 }
 
-#contact-me a:visited {
+#contact-me,#projects a:visited {
   color: #423f66;
 }
 
-#contact-me a:hover {
+#contact-me, #projects a:hover {
   color: #aba8ce;
 }
 
-#contact-me a:active {
+#contact-me,#projects˜ a:active {
   color: #3d5a80;
 }
 
@@ -137,8 +138,6 @@ hr {
 }
 
 /* contact-me formatting */
- {
-}
 
 #contact-me .item {
   align-self: start;
@@ -221,5 +220,9 @@ form button {
 
   #contact-me .item-double {
     padding-right: 80px;
+  }
+
+  #projects .item{
+    padding: 10px 30px;;
   }
 }
