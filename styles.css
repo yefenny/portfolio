@@ -1,8 +1,378 @@
+/*
+The CSS code gets to executed from top to bottom and left ro right
+
+Basic rules to write CSS
+- write GENERAL rules first (for all the paragraph tags in the website for example) and only after that write CSS for SPECIFIC tags (for example the paragraph tags inside the footer)
+- write the css styles to define for the parent (outside) container and THEN the children (inside containers) of that parent and THEN the children (inside containers) of the child above
+*/
+
+/* -------------------------------------
+CSS reset
+Is a short set of CSS rules that resets the styling of all HTML elements to a consistent baseline so the website will look the same on all browsers
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+  box-sizing: border-box;
+  /*reset Chrome user agent styles*/
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-before: 0px;
+  -webkit-padding-after: 0px;
+  -webkit-padding-start: 0px;
+  -webkit-padding-end: 0px;
+  /*reset Firefox user agent styles*/
+  -moz-margin-before: 0px;
+  -moz-margin-after: 0px;
+  -moz-margin-start: 0px;
+  -moz-margin-end: 0px;
+  -moz-padding-before: 0px;
+  -moz-padding-after: 0px;
+  -moz-padding-start: 0px;
+  -moz-padding-end: 0px;
+  /*reset Internet Explorer user agent styles*/
+  -ms-margin-before: 0px;
+  -ms-margin-after: 0px;
+  -ms-margin-start: 0px;
+  -ms-margin-end: 0px;
+  -ms-padding-before: 0px;
+  -ms-padding-after: 0px;
+  -ms-padding-start: 0px;
+  -ms-padding-end: 0px;
+  /*reset Opera user agent styles*/
+  -o-margin-before: 0px;
+  -o-margin-after: 0px;
+  -o-margin-start: 0px;
+  -o-margin-end: 0px;
+  -o-padding-before: 0px;
+  -o-padding-after: 0px;
+  -o-padding-start: 0px;
+  -o-padding-end: 0px;
+}
+
+/* -------------------------------------
+General styles (General Module, wrapping around the modules below)
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules below (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+/* Remember to delete the borders */
+
+body {
+  text-align: center;
+  line-height: 1.5;
+  height: auto;
+  background-color: #fdfffc;
+  color: #6d68a1;
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: cursive;
+}
+
+h2 {
+  color: #0e4eb4;
+}
+
+input,
+select,
+button {
+  border: 1px solid #0e4eb4;
+  padding: 10px 25px;
+  margin: 5px;
+  border-radius: 15px;
+  color: orange;
+}
+p,
+ul,
+ol {
+  text-align: left;
+  word-spacing: normal;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #6d7296;
+}
+
+button:hover {
+  background-color: #efc43f;
+  color: black;
+}
+
+button[type='submit'] {
+  background-color: transparent;
+  border: 2px solid #c01c17;
+}
+
+button[type='submit']:hover {
+  color: #c01c17;
+}
+
+label {
+  display: block;
+  margin: 10px;
+}
+
+/*
+The clearfix Hack: If an element is taller than the element containing it, and it is floated, it will "overflow" outside of its container
+https://www.w3schools.com/css/css_float_clear.asp
+*/
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+header {
+  height: 700px;
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-top: 0;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin: auto;
+  color: #fdfffc;
+  font-family: 'Roboto Slab', serif;
+  background-image: url('./images/hero-image.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  height: 700px;
+}
+
+header nav {
+  margin: 0px;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  display: block;
+  width: 100%;
+  top: 0;
+  text-align: left;
+}
+
+header h2.slogan {
+  font-family: 'Roboto Slab', serif;
+  font-size: 40px;
+  position: absolute;
+  top: 250px;
+  left: 70px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+header nav h1 {
+  font-family: 'Roboto Slab', serif;
+  display: inline-block;
+  width: auto;
+  color: white;
+  padding: 16px 0px 0px;
+  margin: 0px;
+  font-size: 28px;
+  font-weight: 500;
+  /* right: 500px;
+  bottom: 10px; */
+}
+
+header nav ul.nav-items {
+  display: inline-block;
+  width: auto;
+  list-style-type: none;
+  float: right;
+}
+
+header nav ul.nav-items li {
+  display: inline-block;
+  width: auto;
+  padding: 10px 20px;
+  border-right: 2px solid #ddd;
+}
+
+header nav ul.nav-items li:last-child {
+  border-right: 0;
+}
+
+/* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+section {
+  padding: 100px 180px;
+  border-bottom: 2px solid green;
+  text-align: left;
+  font-family: 'Roboto Slab', serif;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ccc;
+}
+
+section h2 {
+  font-family: 'Roboto Slab', serif;
+  color: #ddd;
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 38px;
+}
+
+section#about-me,
+section#services {
+  background-color: #ddd;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+section#about-me h2,
+section#services h2 {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+section .group img {
+  /* width: 80%; */
+  height: 300px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+section.projects div.project-container {
+  margin-bottom: 5%;
+  margin-top: 2%;
+  border-bottom: 1px solid #ccc;
+}
+
+section.projects div.project-container:last-child {
+  border-bottom: 0;
+}
+
+section.projects div.project-container h4 {
+  margin-bottom: 15px;
+  font-size: 120%;
+}
+
+section.projects div.project-container div.project-column {
+  display: inline-block;
+  width: 48%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  padding-left: 20px;
+}
+
+section.projects div.project-container div.project-column img {
+  width: 100%;
+}
+
+/* -------------------------------------
+Footer styles (Main Module)
+(all the styles inside the < footer > tag)
+*/
+
+footer {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  border: 0px;
+}
+
+footer a {
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  color: #163a8b;
+}
+
+footer a:hover {
+  color: #081e6f;
+}
+
+/* -------------------------------------
+place all the desktop styles above this line
+
+Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+
+place all the mobile tables styles below this line
+*/
+
+/*large desktop*/
+@media only screen and (max-width: 1600px) {
+  body {
+    
+  }
+}
+
+/*iPad lanscape / small laptop*/
+@media only screen and (max-width: 1024px) {
+  body {
+    
+  }
+}
+
+/*iPad potrait*/
+@media only screen and (max-width: 768px) {
+  body {
+    
+  }
+}
+
+/*Android landscape*/
+@media only screen and (max-width: 640px) {
+  body {
+   
+  }
+}
+
+/*iPhone landscape*/
+@media only screen and (max-width: 480px) {
+  body {
+    border: 3px solid green;
+  }
+}
+
+/*iPhone portrait*/
+@media only screen and (max-width: 320px) {
+  body {
+    border: 3px solid purple;
+  }
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* My old code */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 body {
   background-color: #fdfffc;
   color: #6d68a1;
   font-family: 'Alata', sans-serif;
-  text-align: center;
   font-size: 20px;
 }
 
@@ -39,17 +409,8 @@ header {
   flex-direction: column;
 }
 
-header nav {
-  display: flex;
-  flex-direction: row;
-  margin-top: 0;
-  justify-content: center;
-}
-header nav ul {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-}
+
+
 
 header nav ul li {
   margin: 0 10px 0 0;
@@ -66,57 +427,32 @@ header nav ul li a {
 
 /* Main container formatting */
 
-section .group img {
-  width: 60%;
-  text-align: center;
-  border-radius: 50%;
-}
-
-section {
-  margin: 0;
-  padding: 30px;
-}
-
-p,
-ul,
-ol {
-  text-align: left;
-  word-spacing: normal;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 60px;
-  font-size: 38px;
-}
-
 hr {
   margin: 50px auto;
 }
 
 /* contact me links style */
-#contact-me a:link, #projects a:link {
+#contact-me a:link,
+#projects a:link {
   color: #6d68a1;
 }
 
-#contact-me,#projects a:visited {
+#contact-me,
+#projects a:visited {
   color: #423f66;
 }
 
-#contact-me, #projects a:hover {
+#contact-me,
+#projects a:hover {
   color: #aba8ce;
 }
 
-#contact-me,#projects˜ a:active {
+#contact-me,
+#projects˜ a:active {
   color: #3d5a80;
 }
 
 /* About Me and services Mobile format */
-#about-me,
-#services {
-  background-color: #6d68a1;
-  color: #fdfffc;
-}
 
 #services ul li {
   margin: 20px 0;
@@ -175,38 +511,7 @@ form button {
   border-radius: 20px;
 }
 
-/* View for Desktop */
-@media all and (min-width: 800px) {
-  /* Nav bar Desktop */
-
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  header h1 {
-    margin: 0 0 20px 40px;
-  }
-
-  header nav {
-    margin: 14px 30px 0 0;
-  }
-
-  header nav ul li a:hover {
-    color: #efeef3;
-  }
-
   /* intro section */
-
-  section {
-    margin: 20px 168px;
-  }
-
-  section .group img {
-    width: 80%;
-    height: 300px;
-  }
 
   .group {
     display: flex;
@@ -223,7 +528,7 @@ form button {
     padding-right: 80px;
   }
 
-  #projects .item{
-    padding: 10px 30px;;
+  #projects .item {
+    padding: 10px 30px;
   }
 }
