@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://kit.fontawesome.com/31b64f49de.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,10 +18,11 @@
         <nav>
             <h1>Yefenny Chireno</h1>
             <ul class= "nav-items" id="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-me">About </a></li>
-                <li><a href="#projects">Portfolio </a></li>
-                <li><a href="#contact-me">Contact </a></li>
+                <li><a href="#home"> <i class="fas fa-home"></i> <span class="hide">Home</span></a></li>
+                <li><a href="#about-me"> <i class="fas fa-user"></i>  <span class="hide">About</span> </a></li>
+                <li><a href="#skills"> <i class="fas fa-cog"></i> <span class="hide"> Skills</span> </a></li>
+                <li><a href="#projects"> <i class="fas fa-briefcase"></i> <span class="hide"> Projects</span> </a></li>
+                <li><a href="#contact-me"> <i class="fas fa-envelope"></i> <span class="hide"> Contact</span> </a></li>
             </ul>
         </nav>
         <h2 class="slogan">Building step by step</h2>
@@ -29,7 +31,7 @@
     <main>
         <article>
             <!--This is the Intro-->
-            <section id="home">
+            <section id="about-me">
                 <div class="group">
                   
                     <div class="item-double">
@@ -45,9 +47,7 @@
                 </div>
             </section>
             <!--This is the about me section as the h2 below can tell you-->
-            <section id="about-me">
-                <div class="group">
-                    <div class="item">
+            <section id="skills">
                         <h2>Skills</h2>
                         <div class="logos-container">
                             <figure class="figure-skills">
@@ -111,100 +111,78 @@
                                 </figcaption>
                             </figure>
                         </div>
-                    </div>
-                </div>
 
             </section>
             <!-- Porfolio with the description of each project-->
             <section id="projects">
-                <h2>Portfolio</h2>
-                <div class="group">
+                <h2>Projects</h2>
+                <div class="projects-container">
                     <div class="item">
-                        <img src="images/portfolio.png" alt="first-project-image">
-                        <h3>My portfolio</h3>
-                        <p> This is my portfolio. It was created to show a little bit about me and also to show the projects that I have worked on. I built it using HTML and CSS. </p>
-                        <ul>
-                            <li><a href="https://github.com/yefenny/portfolio">Github repository</a></li>
-                            <li> <a href="https://yefenny.github.io/portfolio/">Live project</a></li>
-                        </ul>
-                    </div>
-                    <div class="item">
-                        <img src="images/placeholder.png" alt="second-project-image">
-                        <h3>Project 2</h3>
-                        <p>This is a description of the Project 1 I built. I'll share what my goal was in creating it,the skills/languages I applied, and what I learned doing it. </p>
-                            <ul>
-                                <li><a href="https://github.com/yefenny/portfolio">Github repository</a></li>
-                                <li> <a href="https://yefenny.github.io/portfolio/">Live project</a></li>
-                            </ul>
-                    </div>
-                </div>
-                <div class="group">
-                    <div class="item">
-                        <img src="images/placeholder.png" alt="third-project-image">
-                        <h3>Project 3</h3>
-                        <p>This is a description of the Project 1 I built. I'll share what my goal was in creating it,the skills/languages I applied, and what I learned doing it. </p>
-                            <ul>
-                                <li><a href="https://github.com/yefenny/portfolio">Github repository</a></li>
-                                <li> <a href="https://yefenny.github.io/portfolio/">Live project</a></li>
-                            </ul>
-                    </div>
-                    <div class="item">
-                        <img src="images/placeholder.png" alt="fourth-project-image">
-                        <h3>Project 4</h3>
-                        <p>This is a description of the Project 1 I built. I'll share what my goal was in creating it,the skills/languages I applied, and what I learned doing it. </p>
-                            <ul>
-                                <li><a href="https://github.com/yefenny/portfolio">Github repository</a></li>
-                                <li> <a href="https://yefenny.github.io/portfolio/">Live project</a></li>
-                            </ul>
-                    </div>
-                </div>
-            </section>
+                        <img src="./images/fit-journal.png" alt="fit-journal-image">
 
-            <section id="services">
-                <h2>Services</h2>
-                <p>These are the services that I offer. Feel free to contact me. </p>
-                <ul>
-                    <li>Front-end Developer</li>
-                    <li>Back-end Developer</li>
-                    <li>Full-stack Developer</li>
-                </ul>
+                        <div class="project-details">
+                             <h3>Fit journal</h3>
+                            <p> Are you a fitness enthusiast ? The FIT-JOURNAL is the app for you. This app allows you to store your favorites meals from the recipes that you get on the internet, your favorites exercises and also allows you to track you body composition progress just as a Fitness journal but Virtual! </p>
+                            <ul class="projects-skills">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>Node</li>
+                                <li>Postgres</li>
+                                <li>Heroku</li>
+                                <li>Vercel</li>
+                                </ul>
+                            <ul class="projects-links">
+                            <li><a href="https://github.com/yefenny/fit-journal-client">Code</a></li>
+                            <li> <a href="https://fit-journal-client-bl1uh6ip4.vercel.app/">Demo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/app-french.png" alt="app-french-image">
+
+                        <div class="project-details">
+                             <h3>App french</h3>
+                            <p> Appfrench is an app that use the space-repetition technique to help you learn new words in french.</p>
+                            <ul class="projects-skills">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>Node</li>
+                                <li>Heroku</li>
+                                <li>Vercel</li>
+                                </ul>
+                            <ul class="projects-links">
+                            <li><a href="https://github.com/yefenny/appfrench-capstone-client">Code</a></li>
+                            <li> <a href="https://appfrench-client.yefenny.vercel.app/">Demo</a></li>
+                            </ul>
+                        </div>
+                    </div>
             </section>
 
             <!-- This is the section that contains the contact form and contact details -->
             <section id="contact-me">
-                <h2>Contact me</h2>
-                <div class="group">
-                    <div class="item-double">
-                        <form action="https://formspree.io/f/xayleera" method="POST">
-                            <label for="user-name">Name:</label>
-                            <input id="user-name" type="text" name="name">
-                            <label for="user-email">Email:</label>
-                            <input id="user-email" type="text" name="_replyto">
-
-                            <label for="user-message">Message:</label>
-                            <textarea id="user-message" name="message"></textarea>
-                            <button type="submit">Send</button>
-                        </form>
-                    </div>
-                    <div class="item">
-                        <p>Email: <a
-                                href="mailto:yefenny300@icloud.com?subject=I%20would%20like%20to%20hire%20you">yefenny300@gmail.com</a>
-                        </p>
-                        <p>Follow me:</p>
-                        <ol>
-                            <li><a href=" https://www.linkedin.com/in/yefenny-chireno-270047169/"
-                                    target="_blank">Linkedin</a>
-                            </li>
-                            <li><a href="https://github.com/yefenny/" target="_blank">Github</a></li>
-                        </ol>
-                    </div>
-                </div>
-
+                <ul >
+                    <li>
+                        <a href="mailto:yefenny300@icloud.com?subject=Responding%20to%20Your%20Portfolio!" target="_blank"><i class="fas fa-envelope"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/yefennychireno/" target="_blank"> <i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/yefenny" target="_blank"> <i class="fab fa-github"></i></a>
+                    </li>
+                </ul>
+                
+               
+               
             </section>
         </article>
     </main>
     <footer>
-        <p>©Yefenny Chireno</p>
+        <p>© 2020-2021 Yefenny Chireno</p>
     </footer>
     <!--This is the closing tag of the footer container-->
 </body>
