@@ -128,7 +128,7 @@ header {
   margin: auto;
   color: #fdfffc;
   font-family: 'Roboto Slab', serif;
-  background-image: url('/images/hero-image.jpg');
+  background-image: url('./images/hero-image.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
