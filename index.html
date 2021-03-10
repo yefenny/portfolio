@@ -11,27 +11,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="https://kit.fontawesome.com/31b64f49de.js" crossorigin="anonymous"></script>
+    <link href="print.css" rel="stylesheet" media="print">
+
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="clearfix">
             <h1>Yefenny Chireno</h1>
             <ul class= "nav-items" id="menu">
-                <li><a href="#home"> <i class="fas fa-home"></i> <span class="hide">Home</span></a></li>
-                <li><a href="#about-me"> <i class="fas fa-user"></i>  <span class="hide">About</span> </a></li>
-                <li><a href="#skills"> <i class="fas fa-cog"></i> <span class="hide"> Skills</span> </a></li>
-                <li><a href="#projects"> <i class="fas fa-briefcase"></i> <span class="hide"> Projects</span> </a></li>
-                <li><a href="#contact-me"> <i class="fas fa-envelope"></i> <span class="hide"> Contact</span> </a></li>
+                <li class="show-web-only"><a href="#home"> <i class="fas fa-home"></i> <span class="hide">Home</span></a></li>
+                <li class="show-web-only"><a href="#about-me"> <i class="fas fa-user"></i>  <span class="hide">About</span> </a></li>
+                <li class="show-web-only"><a href="#skills"> <i class="fas fa-cog"></i> <span class="hide"> Skills</span> </a></li>
+                <li class="show-web-only"><a href="#projects"> <i class="fas fa-briefcase"></i> <span class="hide"> Projects</span> </a></li>
+                <li class="show-web-only"><a href="#contact-me"> <i class="fas fa-envelope"></i> <span class="hide"> Contact</span> </a></li>
+                <li class="show-print-only">
+                    <a href="https://yefenny.github.io/portfolio/">Portfolio Page: yefenny.github.io/portfolio/
+                    </a>
+                </li>
+                <li class="show-print-only">
+                    <a href="mailto:yefenny300@icloud.com?subject=Responding%20to%20Your%20Portfolio!">
+                        <i class="fas fa-envelope"></i> yefenny300@icloud.com
+                    </a>
+                </li>
+                <li class="show-print-only">
+                    <a href="https://github.com/yefenny">
+                        <i class="fab fa-github"></i> GitHub.com/yefenny
+                    </a>
+                </li>
+                <li class="show-print-only">
+                    <a href="https://www.linkedin.com/in/yefennychireno/">
+                        <i class="fab fa-linkedin"></i> www.linkedin.com/in/yefennychireno/
+                    </a>
+                </li>
             </ul>
         </nav>
-        <h2 class="slogan">Building step by step</h2>
+        <h2 class="slogan show-web-only">Building step by step</h2>
     </header>
     <!--This is the ending of the header-->
     <main>
         <article>
             <!--This is the Intro-->
-            <section id="about-me">
+            <section id="about-me clearfix">
                 <div class="group">
                   
                     <div class="item-double">
@@ -46,7 +67,7 @@
                 </div>
             </section>
             <!--This is the about me section as the h2 below can tell you-->
-            <section id="skills">
+            <section class="skills" id="skills">
                         <h2>Skills</h2>
                         <div class="logos-container">
                             <figure class="figure-skills">
@@ -136,6 +157,14 @@
                             <li><a href="https://github.com/yefenny/fit-journal-client">Code</a></li>
                             <li> <a href="https://fit-journal-client-bl1uh6ip4.vercel.app/">Demo</a></li>
                             </ul>
+                            <ul class="project-buttons show-print-only">
+                                <li>
+                                    <i class="fas fa-desktop"></i> https://github.com/yefenny/fit-journal-client
+                                </li>
+                                <li>
+                                    <i class="fab fa-github"></i> https://fit-journal-client-bl1uh6ip4.vercel.app/
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="item">
@@ -158,6 +187,14 @@
                             <li><a href="https://github.com/yefenny/budget-app-capstone-client">Code</a></li>
                             <li> <a href="https://budget-app-capstone-client.vercel.app/">Demo</a></li>
                             </ul>
+                            <ul class="project-buttons show-print-only">
+                                <li>
+                                    <i class="fas fa-desktop"></i>https://github.com/yefenny/budget-app-capstone-client
+                                </li>
+                                <li>
+                                    <i class="fab fa-github"></i> https://budget-app-capstone-client.vercel.app/
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="item">
@@ -178,6 +215,14 @@
                             <ul class="projects-links">
                             <li><a href="https://github.com/yefenny/appfrench-capstone-client">Code</a></li>
                             <li> <a href="https://appfrench-client.yefenny.vercel.app/">Demo</a></li>
+                            </ul>
+                            <ul class="project-buttons show-print-only">
+                                <li>
+                                    <i class="fas fa-desktop"></i>https://github.com/yefenny/appfrench-capstone-client
+                                </li>
+                                <li>
+                                    <i class="fab fa-github"></i> https://appfrench-client.yefenny.vercel.app/
+                                </li>
                             </ul>
                         </div>
                     </div>

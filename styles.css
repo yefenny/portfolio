@@ -111,6 +111,9 @@ https://www.w3schools.com/css/css_float_clear.asp
   display: table;
 }
 
+.show-print-only {
+  display: none !important;
+}
 /* -------------------------------------
 Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
@@ -181,6 +184,7 @@ header nav ul.nav-items li {
   padding: 10px 20px;
   border-right: 2px solid #ddd;
 }
+
 header nav ul li a {
   text-decoration: none;
   color: #fdfffc;
@@ -224,6 +228,7 @@ section#skills h2,
 section#contact-me h2 {
   color: rgba(0, 0, 0, 0.9);
 }
+
 section#contact-me ul {
   text-align: center;
 }
@@ -370,6 +375,7 @@ place all the mobile tables styles below this line
   body {
     font-size: 20px;
   }
+
   header nav ul li a span.hide {
     display: none;
   }
@@ -380,17 +386,36 @@ place all the mobile tables styles below this line
   body {
   }
 
+  header nav {
+    margin: 0px;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0;
+    text-align: center;
+  }
+
   header h2 {
     text-align: center;
   }
 
   header h2.slogan {
     font-size: 36px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 
   header nav h1 {
     font-size: 24px;
   }
+
+  header nav ul.nav-items li {
+    padding: 10px 15px;
+  }
+
   header nav ul li a {
     font-size: 18px;
   }
@@ -415,6 +440,7 @@ place all the mobile tables styles below this line
     display: grid;
     grid-template-columns: 100%;
   }
+
   section div.group div.item img {
     width: 70%;
   }
@@ -424,13 +450,42 @@ place all the mobile tables styles below this line
 @media only screen and (max-width: 480px) {
   body {
   }
+  header h2.slogan {
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    position: absolute;
+    top: 150px;
+    left: 70px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  header nav ul.nav-items li {
+    padding: 10px 15px;
+  }
 }
 
 /*iPhone portrait*/
 @media only screen and (max-width: 320px) {
   body {
   }
+  header h2.slogan {
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    position: absolute;
+    top: 150px;
+    left: 70px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  header nav ul.nav-items li {
+    padding: 10px 15px;
+  }
+  header nav ul.nav-items li {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    border-right: 2px solid #ddd;
+  }
 }
+
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* My old code */
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////// */
